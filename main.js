@@ -27,5 +27,4 @@ const stringToPhonetic = (arr) => {
   return result;
 };
 
-console.log("return >>>", stringToPhonetic([3, 25, 209]));
-console.log("return >>>", stringToPhonetic([10, 300, 5]));
+console.log(stringToPhonetic(process.argv.splice(2)));
