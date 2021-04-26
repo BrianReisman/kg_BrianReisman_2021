@@ -16,18 +16,16 @@ const stringToPhonetic = (arr) => {
   arr.forEach((number) => {
     const numStringArr = number.toString().split("");
     const numLength = number.toString().length;
-    console.log('number', number)
-    console.log('numStringArr', numStringArr)
-    console.log('numLength', numLength)
-
     let phoneticNumber = "";
 
-    // for loop to .concat() each digit into one string
-
+    for (let i = 0; i < numLength; i++) {
+      phoneticNumber = phoneticNumber.concat(strings[numStringArr[i]]);
+    }
     result.push(phoneticNumber);
   });
 
   return result;
 };
 
-console.log(stringToPhonetic([3, 25, 209]));
+console.log("return >>>", stringToPhonetic([3, 25, 209]));
+console.log("return >>>", stringToPhonetic([10, 300, 5]));
